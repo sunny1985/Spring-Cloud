@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: cloud-feign
+server:
+  port: 3333
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ip239:1112/eureka/,http://ip251:1113/eureka/

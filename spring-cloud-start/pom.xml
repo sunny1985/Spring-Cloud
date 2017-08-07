@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.intelligencesoft.springcloud</groupId>
+  <artifactId>spring-cloud-start</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>cloud-eureka</module>
+    <module>cloud-config</module>
+    <module>cloud-common</module>
+    <module>cloud-repo</module>
+    <module>cloud-ribbon</module>
+      <module>cloud-provider</module>
+    <module>cloud-consumer</module>
+      <module>cloud-domain</module>
+    <module>cloud-feign</module>
+    <module>cloud-gateway</module>
+  </modules>
+  <name>spring-cloud-start</name>
+  <url>http://maven.apache.org</url>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.6.RELEASE</version>
+  </parent>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.8</java.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>Dalston.SR1</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <dependencies>
+    <!--测试 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+    <!--web应用基本环境配置 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <!-- aop切面配置 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-aop</artifactId>
+    </dependency>
+    <!-- 监控 -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-config</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-eureka</artifactId>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>spring-cloud-start</finalName>
+  </build>
+</project>

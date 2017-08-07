@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: cloud-consumer
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      profile: dev
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ip239:1112/eureka/,http://ip251:1113/eureka/
+

@@ -1,0 +1,21 @@
+# 应用名称
+spring:
+  application:
+    name: cloud-server
+  #使用dev环境属性
+  profiles:
+    active: server239
+
+# 请求日志
+server:
+  tomcat:
+    basedir: logs
+    accesslog:
+      enabled: true
+      directory: .
+
+
+# 服务配置(Tomcat启动端口)
+#server:
+#  port: 1111
+

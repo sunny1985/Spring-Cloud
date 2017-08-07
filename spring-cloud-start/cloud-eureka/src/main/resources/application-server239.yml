@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: loud-eureka
+server:
+  port: 1112
+eureka:
+  instance:
+    hostname: ip239
+  client:
+    service-url: http://ip251:1113/eureka/
+

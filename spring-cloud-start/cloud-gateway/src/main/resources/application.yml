@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: cloud-gateway
+server:
+  port: 8080
+  tomcat:
+    basedir: logs
+    accesslog:
+      enabled: true
+      directory: .
+zuul:
+  routes:
+    api:
+      path: /api/**
+      service-id: cloud-consumer
+    api2:
+      path: /api2/**
+      service-id: cloud-feign
+    api3:
+      path: /api3/**
+      service-id: cloud-ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ip239:1112/eureka/,http://ip251:1113/eureka/
+
+
