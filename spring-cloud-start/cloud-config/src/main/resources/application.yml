@@ -2,6 +2,15 @@
 spring:
   application:
     name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sunny1985/Spring-Cloud.git
+          search-paths: spring-cloud-start/cloud-repo
+          username:
+          password:
+
 # 端口
 server:
   port: 7001
